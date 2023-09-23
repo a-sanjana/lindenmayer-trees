@@ -1,6 +1,6 @@
 # Lindenmayer Trees
 ## Algorithm Descrition
-Lindenmayer systems or L-systems use parallel rewriting systems to model various organisms and fractals. It consists of an alphabet to make strings, an axiom and set of rules for production. L-Systems are recursive in nature, which leads to self-similarity. Our project consists of two main shapes - line and circle. The line drawing is an implementation of Bressenham's Line Algorithms, and the cicle utilizes the Midpoint Circle Algorithm. To draw the final output, we use the concept of L-Systems. The generated string is parsed and the set of production rules are applied. These rules are described above. The outputs produced with increasing iterations is shown above as well.
+Lindenmayer systems or L-systems use parallel rewriting systems to model various organisms and fractals. It consists of an alphabet to make strings, an axiom and set of rules for production. L-Systems are recursive in nature, which leads to self-similarity. This project consists of two main shapes - line and circle. The line drawing is an implementation of Bressenham's Line Algorithm, and the cicle utilizes the Midpoint Circle Algorithm. To draw the final output, the concept of L-Systems is used. The generated string is parsed and the set of production rules are applied. These rules are described below. The outputs produced with increasing iterations are shown below as well.
 ## Symbols
 - F : indicates to draws a line at a given coordinate at the specified angle and length.
 - \- : rotate right
