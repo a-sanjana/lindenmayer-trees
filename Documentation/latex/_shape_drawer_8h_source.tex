@@ -1,0 +1,196 @@
+\doxysection{Shape\+Drawer.\+h}
+\hypertarget{_shape_drawer_8h_source}{}\label{_shape_drawer_8h_source}\index{C:/Users/adapa/OpenGL/Project2/ShapeDrawer.h@{C:/Users/adapa/OpenGL/Project2/ShapeDrawer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ShapeDrawer\_h}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ShapeDrawer\_h}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifdef\ \_\_APPLE\_\_}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <OpenGL/gl.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <GL/gl.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ \_USE\_MATH\_DEFINES}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ direction(x1,\ x2)\ ((x2\ >\ x1)\ ?\ 1\ :\ -\/1)\ }}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ toRadians(degrees)\ ((double)degrees\ *\ M\_PI)/180\ }}
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_shape_drawer}{ShapeDrawer}}\ \{}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ GLfloat\ red,\ green,\ blue,\ pointSize;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ swap(\textcolor{keywordtype}{int}*\ a,\ \textcolor{keywordtype}{int}*\ b)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ A\ method\ to\ swap\ two\ numbers.}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ d\ =\ *a;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ *a\ =\ *b;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ *b\ =\ d;}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shape_drawer_aa23b250cde41ff80df821a327024e45d}{plotCircle}}(GLint\ xi,\ GLint\ yi,\ GLint\ xc,\ GLint\ yc)\ \{}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_shape_drawer_abeddda65920c7b45dd03a76a37a2c8ad}{drawPixel}}(xi\ +\ xc,\ yi\ +\ yc);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_shape_drawer_abeddda65920c7b45dd03a76a37a2c8ad}{drawPixel}}(xi\ +\ xc,\ yc\ -\/\ yi);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_shape_drawer_abeddda65920c7b45dd03a76a37a2c8ad}{drawPixel}}(xc\ -\/\ xi,\ yc\ +\ yi);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_shape_drawer_abeddda65920c7b45dd03a76a37a2c8ad}{drawPixel}}(xc\ -\/\ xi,\ yc\ -\/\ yi);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_shape_drawer_abeddda65920c7b45dd03a76a37a2c8ad}{drawPixel}}(xc\ +\ yi,\ yc\ +\ xi);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_shape_drawer_abeddda65920c7b45dd03a76a37a2c8ad}{drawPixel}}(xc\ +\ yi,\ yc\ -\/\ xi);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_shape_drawer_abeddda65920c7b45dd03a76a37a2c8ad}{drawPixel}}(xc\ -\/\ yi,\ yc\ +\ xi);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_shape_drawer_abeddda65920c7b45dd03a76a37a2c8ad}{drawPixel}}(xc\ -\/\ yi,\ yc\ -\/\ xi);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_shape_drawer_ac1466762eb0c17bad1270280ea3d29b9}{ShapeDrawer}}()\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ this-\/>red\ =\ 1.0;\ \textcolor{comment}{//\ Set\ the\ default\ color\ to\ red\ in\ case\ setColour\ method\ is\ not\ called}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ this-\/>green\ =\ 0.0;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ this-\/>blue\ =\ 0.0;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ this-\/>pointSize\ =\ 1.0;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ srand((\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})time(NULL));\ \textcolor{comment}{//\ Seed\ the\ randomizer\ with\ timestamp.}}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shape_drawer_a0842aba89dfd503c3db180469780a883}{randomizeColour}}()\ \{}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Update\ the\ values\ of\ red,\ green,\ blue\ with\ some\ random\ doubles.}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ this-\/>red\ =\ ((double)(rand()\ \%\ 100))\ /\ 100;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ this-\/>green\ =\ ((double)(rand()\ \%\ 100))\ /\ 100;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ this-\/>blue\ =\ ((double)(rand()\ \%\ 100))\ /\ 100;}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shape_drawer_ac65f5d5a9cca8167dea01d3f2c49f854}{setColour}}(GLfloat\ red\ =\ 1.0,\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ GLfloat\ green\ =\ 0.0,\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ GLfloat\ blue\ =\ 0.0\ }
+\DoxyCodeLine{00070\ \ \ \ \ )\ \{}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ this-\/>red\ =\ red;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ this-\/>green\ =\ green;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ this-\/>blue\ =\ blue;}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shape_drawer_a05e88ac4795336a98c19d2f6cd0941de}{setPointSize}}(GLfloat\ pointSize\ }
+\DoxyCodeLine{00079\ \ \ \ \ )\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ this-\/>pointSize\ =\ pointSize;}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shape_drawer_abeddda65920c7b45dd03a76a37a2c8ad}{drawPixel}}(GLint\ x,\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ GLint\ y\ }
+\DoxyCodeLine{00086\ \ \ \ \ )\ \{}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ glColor3f(red,\ green,\ blue);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ glPointSize(pointSize);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ glBegin(GL\_POINTS);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ glVertex2i(x,\ y);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ glEnd();}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shape_drawer_a553334cf72681ed53893fc44a32153aa}{drawLine}}(\textcolor{keywordtype}{int}\ x1,\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ y1,\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x2,\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ y2\ }
+\DoxyCodeLine{00100\ \ \ \ \ )\ \{}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dx\ =\ abs(x2\ -\/\ x1);\ \textcolor{comment}{//\ Find\ the\ magnitude\ of\ change\ in\ X-\/Direction}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dy\ =\ abs(y2\ -\/\ y1);\ \textcolor{comment}{//\ Find\ the\ magnitude\ of\ change\ in\ Y-\/Direction}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ xDirection\ =\ 0,\ yDirection\ =\ 0,\ swapStatus\ =\ 0;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ x\ =\ x1,\ y\ =\ y1;}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ xDirection\ =\ direction(x1,\ x2);\ \textcolor{comment}{//Find\ whether\ X\ is\ increasing\ or\ decreasing}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ yDirection\ =\ direction(y1,\ y2);\ \textcolor{comment}{//Find\ whether\ Y\ is\ increasing\ or\ decreasin}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dy\ >\ dx)\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ swap(\&dy,\ \&dx);\ \textcolor{comment}{//\ If\ magnitude\ of\ slope\ is\ greater\ than\ 1,\ swap\ dx\ and\ dy}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ swapStatus\ =\ 1;\ \textcolor{comment}{//\ Toggle\ the\ swap\ flag.}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ d\ =\ 2\ *\ dy\ -\/\ dx;\ \textcolor{comment}{//\ Initial\ value\ for\ decision\ variable}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dNE\ =\ 2\ *\ (dy\ -\/\ dx);\ \textcolor{comment}{//\ Change\ in\ value\ of\ decision\ variable\ of\ North\ East\ pixel\ is\ illuminated}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dE\ =\ 2\ *\ dy;\ \textcolor{comment}{//\ Change\ in\ value\ of\ decision\ variable\ of\ East\ pixel\ is\ illuminated}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 1;\ i\ <=\ dx;\ i++)\ \{\ \textcolor{comment}{//\ Start\ iterating\ in\ X\ direction.\ (This\ will\ iterate\ in\ Y\ direction\ if\ dy\ and\ dx\ are\ swapped)}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_shape_drawer_abeddda65920c7b45dd03a76a37a2c8ad}{drawPixel}}(x,\ y);\ \textcolor{comment}{//\ Illuminate\ the\ first\ pixel.}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (d\ >=\ 0)\ \textcolor{comment}{//\ Select\ North\ East\ pixel\ if\ d\ >=\ 0}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (swapStatus)}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ x\ +\ xDirection;\ \textcolor{comment}{//\ Increment\ x\ if\ we\ are\ moving\ along\ Y\ direction}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ y\ +\ yDirection;\ \textcolor{comment}{//\ Increment\ y\ if\ we\ are\ moving\ along\ X\ direction.}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ d\ =\ d\ +\ dNE;\ \textcolor{comment}{//\ Change\ the\ value\ of\ decision\ variable\ accordingly.}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ d\ =\ d\ +\ dE;}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (swapStatus)}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ y\ +\ yDirection;\ \textcolor{comment}{//\ Move\ along\ Y\ axis\ if\ the\ slope\ of\ line\ is\ greater\ than\ 1\ i.e.\ dy\ and\ dx\ were\ swapped.}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ x\ +\ xDirection;\ \textcolor{comment}{//\ Move\ along\ X\ in\ the\ other\ case.}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00144\ \ \ \ \ \}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shape_drawer_aa9a5d127478916b0ab46d68aa8e54a7b}{drawLineAtAngle}}(GLint\ x1,\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ GLint\ y1,\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ angle,\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ length\ }
+\DoxyCodeLine{00150\ \ \ \ \ )\ \{}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select\ the\ ending\ point\ based\ on\ the\ length\ and\ angle\ with\ positive\ X\ direction.}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x2\ =\ round(x1\ +\ (length\ *\ cos(toRadians(angle))));}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ y2\ =\ round(y1\ +\ (length\ *\ sin(toRadians(angle))));}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Call\ the\ drawLine\ method\ with\ starting\ and\ ending\ point\ as\ arguments.}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_shape_drawer_a553334cf72681ed53893fc44a32153aa}{drawLine}}(x1,\ y1,\ x2,\ y2);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shape_drawer_a4e7b62f2ccd0253748a7e390ea474434}{drawCircle}}(\textcolor{keywordtype}{int}\ x0,\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ y0,\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ r0\ }
+\DoxyCodeLine{00168\ \ \ \ \ )\ \{}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ draw\ only\ 1/8\ of\ a\ circle\ and\ plot\ remaining\ points\ using\ symmetry.}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ 0;\ \textcolor{comment}{//\ X\ coordinate\ of\ first\ point.}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ r0;\ \textcolor{comment}{//\ Y\ coordinate\ of\ first\ point.}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ d\ =\ 1\ -\/\ r0;\ \textcolor{comment}{//\ Initial\ value\ of\ decision\ variable}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Method\ of\ second\ order\ difference}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ deltaE\ =\ 3;}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ deltaSE\ =\ -\/2\ *\ r0\ +\ 5;}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (x\ <=\ y)\ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_shape_drawer_aa23b250cde41ff80df821a327024e45d}{plotCircle}}(x,\ y,\ x0,\ y0);\ \textcolor{comment}{//\ Plot\ symmetrical\ points}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Choose\ appropriate\ pixel\ based\ on\ decision\ variable.}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (d\ <\ 0)\ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ d\ =\ d\ +\ deltaE;\ \textcolor{comment}{//\ Increment\ the\ value\ of\ decision\ variable.}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ deltaE\ =\ deltaE\ +\ 2;}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ deltaSE\ =\ deltaSE\ +\ 2;\ \textcolor{comment}{//\ Method\ of\ second\ order\ difference}}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ d\ =\ d\ +\ deltaSE;}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ deltaE\ =\ deltaE\ +\ 2;}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ deltaSE\ =\ deltaSE\ +\ 4;}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ y-\/-\/;}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ x++;}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \};}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \textcolor{comment}{/*\ ShapeDrawer\_h\ */}}
+
+\end{DoxyCode}

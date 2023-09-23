@@ -1,0 +1,2 @@
+C:\Users\adapa\OpenGL\GLP\Project2\x64\Debug\Project2.exe
+C:\Users\adapa\OpenGL\Project2\x64\Debug\Project2.exe

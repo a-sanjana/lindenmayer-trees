@@ -1,0 +1,45 @@
+﻿  main.cpp
+C:\Users\adapa\OpenGL\Project2\ShapeDrawer.h(12,1): warning C4005: '_USE_MATH_DEFINES': macro redefinition
+C:\Users\adapa\OpenGL\Project2\ShapeDrawer.h(12,1): message : '_USE_MATH_DEFINES' previously declared on the command line
+C:\Users\adapa\OpenGL\Project2\ShapeDrawer.h(62,46): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\adapa\OpenGL\Project2\ShapeDrawer.h(63,48): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\adapa\OpenGL\Project2\ShapeDrawer.h(64,47): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\adapa\OpenGL\Project2\ShapeDrawer.h(157,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\adapa\OpenGL\Project2\ShapeDrawer.h(158,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\adapa\OpenGL\Project2\Lindenmayer.h(112,25): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\adapa\OpenGL\Project2\Lindenmayer.h(217,34): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\adapa\OpenGL\Project2\Lindenmayer.h(218,34): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\adapa\OpenGL\Project2\Lindenmayer.h(238,42): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\adapa\OpenGL\Project2\Lindenmayer.h(238,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\adapa\OpenGL\Project2\Lindenmayer.h(238,30): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\adapa\OpenGL\Project2\Lindenmayer.h(263,33): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\adapa\OpenGL\Project2\Lindenmayer.h(284,42): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\adapa\OpenGL\Project2\Lindenmayer.h(284,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\adapa\OpenGL\Project2\Lindenmayer.h(284,30): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\adapa\OpenGL\Project2\Lindenmayer.h(285,33): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\adapa\OpenGL\Project2\main.cpp(140,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\adapa\OpenGL\Project2\main.cpp(140,15): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\adapa\OpenGL\Project2\main.cpp(145,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\adapa\OpenGL\Project2\main.cpp(145,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\adapa\OpenGL\Project2\main.cpp(145,15): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\adapa\OpenGL\Project2\main.cpp(157,32): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\adapa\OpenGL\Project2\main.cpp(157,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\adapa\OpenGL\Project2\main.cpp(157,18): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\adapa\OpenGL\Project2\main.cpp(165,34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\adapa\OpenGL\Project2\main.cpp(165,28): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\adapa\OpenGL\Project2\main.cpp(165,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\adapa\OpenGL\Project2\main.cpp(175,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\adapa\OpenGL\Project2\main.cpp(186,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\adapa\OpenGL\Project2\main.cpp(192,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\adapa\OpenGL\Project2\main.cpp(198,20): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\adapa\OpenGL\Project2\main.cpp(214,19): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\adapa\OpenGL\Project2\main.cpp(215,19): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\adapa\OpenGL\Project2\main.cpp(222,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\adapa\OpenGL\Project2\main.cpp(243,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\adapa\OpenGL\Project2\main.cpp(244,28): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\adapa\OpenGL\Project2\main.cpp(244,20): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\adapa\OpenGL\Project2\main.cpp(245,31): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\adapa\OpenGL\Project2\main.cpp(245,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Users\adapa\OpenGL\Project2\main.cpp(246,26): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\adapa\OpenGL\Project2\main.cpp(246,20): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+  Project2.vcxproj -> C:\Users\adapa\OpenGL\Project2\x64\Debug\Project2.exe

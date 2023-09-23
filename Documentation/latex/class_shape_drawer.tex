@@ -1,0 +1,183 @@
+\doxysection{Shape\+Drawer Class Reference}
+\hypertarget{class_shape_drawer}{}\label{class_shape_drawer}\index{ShapeDrawer@{ShapeDrawer}}
+
+
+A class to draw various shapes (lines, circles and even pixels !)  
+
+
+
+
+{\ttfamily \#include $<$Shape\+Drawer.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shape_drawer_ac1466762eb0c17bad1270280ea3d29b9}{Shape\+Drawer}} ()
+\item 
+void \mbox{\hyperlink{class_shape_drawer_a0842aba89dfd503c3db180469780a883}{randomize\+Colour}} ()
+\item 
+void \mbox{\hyperlink{class_shape_drawer_ac65f5d5a9cca8167dea01d3f2c49f854}{set\+Colour}} (GLfloat red=1.\+0, GLfloat green=0.\+0, GLfloat blue=0.\+0)
+\item 
+void \mbox{\hyperlink{class_shape_drawer_a05e88ac4795336a98c19d2f6cd0941de}{set\+Point\+Size}} (GLfloat point\+Size)
+\item 
+void \mbox{\hyperlink{class_shape_drawer_abeddda65920c7b45dd03a76a37a2c8ad}{draw\+Pixel}} (GLint x, GLint y)
+\item 
+void \mbox{\hyperlink{class_shape_drawer_a553334cf72681ed53893fc44a32153aa}{draw\+Line}} (int x1, int y1, int x2, int y2)
+\item 
+void \mbox{\hyperlink{class_shape_drawer_aa9a5d127478916b0ab46d68aa8e54a7b}{draw\+Line\+At\+Angle}} (GLint x1, GLint y1, double angle, double length)
+\item 
+void \mbox{\hyperlink{class_shape_drawer_a4e7b62f2ccd0253748a7e390ea474434}{draw\+Circle}} (int x0, int y0, int r0)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_shape_drawer_a753d9ad484628e529c9635664c776726}\label{class_shape_drawer_a753d9ad484628e529c9635664c776726} 
+void {\bfseries swap} (int \texorpdfstring{$\ast$}{*}a, int \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{class_shape_drawer_aa23b250cde41ff80df821a327024e45d}{plot\+Circle}} (GLint xi, GLint yi, GLint xc, GLint yc)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_shape_drawer_a39ea3c17f1d431e6861a137aa6739e56}\label{class_shape_drawer_a39ea3c17f1d431e6861a137aa6739e56} 
+GLfloat {\bfseries red}
+\item 
+\Hypertarget{class_shape_drawer_a9b08542cf3268a9f65e26d6b6e72160a}\label{class_shape_drawer_a9b08542cf3268a9f65e26d6b6e72160a} 
+GLfloat {\bfseries green}
+\item 
+\Hypertarget{class_shape_drawer_a60276cd150c7f085297ef7d58538b676}\label{class_shape_drawer_a60276cd150c7f085297ef7d58538b676} 
+GLfloat {\bfseries blue}
+\item 
+\Hypertarget{class_shape_drawer_a399a2cc7c57d160882ab4ebfcab97fca}\label{class_shape_drawer_a399a2cc7c57d160882ab4ebfcab97fca} 
+GLfloat {\bfseries point\+Size}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to draw various shapes (lines, circles and even pixels !) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_shape_drawer_ac1466762eb0c17bad1270280ea3d29b9}\label{class_shape_drawer_ac1466762eb0c17bad1270280ea3d29b9} 
+\index{ShapeDrawer@{ShapeDrawer}!ShapeDrawer@{ShapeDrawer}}
+\index{ShapeDrawer@{ShapeDrawer}!ShapeDrawer@{ShapeDrawer}}
+\doxysubsubsection{\texorpdfstring{ShapeDrawer()}{ShapeDrawer()}}
+{\footnotesize\ttfamily Shape\+Drawer\+::\+Shape\+Drawer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor method for \doxylink{class_shape_drawer}{Shape\+Drawer} class to set default color and seed the randomizer.
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shape_drawer_a4e7b62f2ccd0253748a7e390ea474434}\label{class_shape_drawer_a4e7b62f2ccd0253748a7e390ea474434} 
+\index{ShapeDrawer@{ShapeDrawer}!drawCircle@{drawCircle}}
+\index{drawCircle@{drawCircle}!ShapeDrawer@{ShapeDrawer}}
+\doxysubsubsection{\texorpdfstring{drawCircle()}{drawCircle()}}
+{\footnotesize\ttfamily void Shape\+Drawer\+::draw\+Circle (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{r0 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to draw a circle using midpoint algorithm with constant increments given it\textquotesingle{}s centre and radius.
+
+The circle is drawn using the current color of \doxylink{class_shape_drawer}{Shape\+Drawer} object
+\begin{DoxyParams}{Parameters}
+{\em x0} & X coordinate of the centre  \\
+\hline
+{\em y0} & Y coordinate of the centre  \\
+\hline
+{\em r0} & Radius of the circle \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shape_drawer_a553334cf72681ed53893fc44a32153aa}\label{class_shape_drawer_a553334cf72681ed53893fc44a32153aa} 
+\index{ShapeDrawer@{ShapeDrawer}!drawLine@{drawLine}}
+\index{drawLine@{drawLine}!ShapeDrawer@{ShapeDrawer}}
+\doxysubsubsection{\texorpdfstring{drawLine()}{drawLine()}}
+{\footnotesize\ttfamily void Shape\+Drawer\+::draw\+Line (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to draw a line segment between two given points using Bresenham\textquotesingle{}s Algorithm
+
+The line is drawn using the current color of \doxylink{class_shape_drawer}{Shape\+Drawer} object
+\begin{DoxyParams}{Parameters}
+{\em x1} & X coordinate of the starting point  \\
+\hline
+{\em y1} & Y coordinate of the starting point  \\
+\hline
+{\em x2} & X coordinate of the ending point  \\
+\hline
+{\em y2} & Y coordinate of the ending point \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shape_drawer_aa9a5d127478916b0ab46d68aa8e54a7b}\label{class_shape_drawer_aa9a5d127478916b0ab46d68aa8e54a7b} 
+\index{ShapeDrawer@{ShapeDrawer}!drawLineAtAngle@{drawLineAtAngle}}
+\index{drawLineAtAngle@{drawLineAtAngle}!ShapeDrawer@{ShapeDrawer}}
+\doxysubsubsection{\texorpdfstring{drawLineAtAngle()}{drawLineAtAngle()}}
+{\footnotesize\ttfamily void Shape\+Drawer\+::draw\+Line\+At\+Angle (\begin{DoxyParamCaption}\item[{GLint}]{x1,  }\item[{GLint}]{y1,  }\item[{double}]{angle,  }\item[{double}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to draw a line segment given it\textquotesingle{}s starting point, length and the angle made with positive X direction
+
+The line is drawn using the current color of \doxylink{class_shape_drawer}{Shape\+Drawer} object. This method uses Bresenham\textquotesingle{}s Algorithm
+\begin{DoxyParams}{Parameters}
+{\em x1} & X coordinate of the starting point  \\
+\hline
+{\em y1} & Y coordinate of the starting point  \\
+\hline
+{\em angle} & Angle made by the line with the positive X direction  \\
+\hline
+{\em length} & Length of the line segment \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shape_drawer_abeddda65920c7b45dd03a76a37a2c8ad}\label{class_shape_drawer_abeddda65920c7b45dd03a76a37a2c8ad} 
+\index{ShapeDrawer@{ShapeDrawer}!drawPixel@{drawPixel}}
+\index{drawPixel@{drawPixel}!ShapeDrawer@{ShapeDrawer}}
+\doxysubsubsection{\texorpdfstring{drawPixel()}{drawPixel()}}
+{\footnotesize\ttfamily void Shape\+Drawer\+::draw\+Pixel (\begin{DoxyParamCaption}\item[{GLint}]{x,  }\item[{GLint}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to illuminate a pixel with given coordinates on screen.
+
+The given pixel is illuminated with the drawing color of the \doxylink{class_shape_drawer}{Shape\+Drawer} object.
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate of the pixel to be illuminated  \\
+\hline
+{\em y} & Y coordinate of the pixel to be illuminated \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shape_drawer_aa23b250cde41ff80df821a327024e45d}\label{class_shape_drawer_aa23b250cde41ff80df821a327024e45d} 
+\index{ShapeDrawer@{ShapeDrawer}!plotCircle@{plotCircle}}
+\index{plotCircle@{plotCircle}!ShapeDrawer@{ShapeDrawer}}
+\doxysubsubsection{\texorpdfstring{plotCircle()}{plotCircle()}}
+{\footnotesize\ttfamily void Shape\+Drawer\+::plot\+Circle (\begin{DoxyParamCaption}\item[{GLint}]{xi,  }\item[{GLint}]{yi,  }\item[{GLint}]{xc,  }\item[{GLint}]{yc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+A method to plot symmetrical point when drawing a circle using 8-\/way symmetry.\Hypertarget{class_shape_drawer_a0842aba89dfd503c3db180469780a883}\label{class_shape_drawer_a0842aba89dfd503c3db180469780a883} 
+\index{ShapeDrawer@{ShapeDrawer}!randomizeColour@{randomizeColour}}
+\index{randomizeColour@{randomizeColour}!ShapeDrawer@{ShapeDrawer}}
+\doxysubsubsection{\texorpdfstring{randomizeColour()}{randomizeColour()}}
+{\footnotesize\ttfamily void Shape\+Drawer\+::randomize\+Colour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to randomize the drawing color of \doxylink{class_shape_drawer}{Shape\+Drawer} object.\Hypertarget{class_shape_drawer_ac65f5d5a9cca8167dea01d3f2c49f854}\label{class_shape_drawer_ac65f5d5a9cca8167dea01d3f2c49f854} 
+\index{ShapeDrawer@{ShapeDrawer}!setColour@{setColour}}
+\index{setColour@{setColour}!ShapeDrawer@{ShapeDrawer}}
+\doxysubsubsection{\texorpdfstring{setColour()}{setColour()}}
+{\footnotesize\ttfamily void Shape\+Drawer\+::set\+Colour (\begin{DoxyParamCaption}\item[{GLfloat}]{red = {\ttfamily 1.0},  }\item[{GLfloat}]{green = {\ttfamily 0.0},  }\item[{GLfloat}]{blue = {\ttfamily 0.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to set the drawing color of the \doxylink{class_shape_drawer}{Shape\+Drawer} object to the given values.
+
+By default, red color is chosen if this method is not called after object creation.
+\begin{DoxyParams}{Parameters}
+{\em red} & Red value of color ranging 0-\/1  \\
+\hline
+{\em green} & Green value of color ranging 0-\/1  \\
+\hline
+{\em blue} & Blue value of color ranging 0-\/1 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shape_drawer_a05e88ac4795336a98c19d2f6cd0941de}\label{class_shape_drawer_a05e88ac4795336a98c19d2f6cd0941de} 
+\index{ShapeDrawer@{ShapeDrawer}!setPointSize@{setPointSize}}
+\index{setPointSize@{setPointSize}!ShapeDrawer@{ShapeDrawer}}
+\doxysubsubsection{\texorpdfstring{setPointSize()}{setPointSize()}}
+{\footnotesize\ttfamily void Shape\+Drawer\+::set\+Point\+Size (\begin{DoxyParamCaption}\item[{GLfloat}]{point\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to set the pixel draw size of \doxylink{class_shape_drawer}{Shape\+Drawer} object.
+\begin{DoxyParams}{Parameters}
+{\em point\+Size} & Point size in pixels \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/adapa/\+Open\+GL/\+Project2/Shape\+Drawer.\+h\end{DoxyCompactItemize}

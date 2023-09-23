@@ -1,0 +1,57 @@
+\chapter{My Project}
+\hypertarget{index}{}\label{index}\index{My Project@{My Project}}
+\hypertarget{index_autotoc_md0}{}\doxysection{\texorpdfstring{Title\+: Plants, fractals, and formal languages}{Title: Plants, fractals, and formal languages}}\label{index_autotoc_md0}
+\hypertarget{index_autotoc_md1}{}\doxysubsection{\texorpdfstring{IS F311, Computer Graphics Project 1}{IS F311, Computer Graphics Project 1}}\label{index_autotoc_md1}
+Adapala Sanjana 2020B4\+A72243H
+
+Akshitha Bajjuri 2020B2\+A71973H
+
+Aman Agarwal 2020B4\+AA2328H\hypertarget{index_autotoc_md2}{}\doxysubsubsection{\texorpdfstring{Symbols}{Symbols}}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item F \+: indicates to draws a line at a given coordinate at the specified angle and length.
+\item -\/ \+: rotate right
+\item + \+: rotate left
+\item \mbox{[} \+: save current state
+\item \mbox{]} \+: restore previous state
+\item / \+: draw circle at the end of the line
+\item C0\+: change drawing colour to the first colour in the matrix
+\item C1\+: change drawing colour to the second colour in the matrix
+\item C2\+: change drawing colour to the second colour in the matrix
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{Axioms, Rules and Iterations}{Axioms, Rules and Iterations}}\label{index_autotoc_md3}
+\hypertarget{index_autotoc_md4}{}\doxyparagraph{\texorpdfstring{Tree\+:}{Tree:}}\label{index_autotoc_md4}
+Axiom \+: F
+
+Rule \+: F = C0\+FC1/\+F+\mbox{[}+F-\/\+F-\/\+C2/F\mbox{]}-\/\mbox{[}-\/C0\+F+\+F+F\mbox{]}
+
+Iterations\+: 5\hypertarget{index_autotoc_md5}{}\doxyparagraph{\texorpdfstring{Sun\+:}{Sun:}}\label{index_autotoc_md5}
+Axiom \+: \mbox{[}X\mbox{]}++\mbox{[}X\mbox{]}++\mbox{[}X\mbox{]}++\mbox{[}X\mbox{]}++\mbox{[}X\mbox{]}
+
+Rules
+\begin{DoxyItemize}
+\item W=YF++\+ZF-\/---XF\mbox{[}-\/YF-\/---WF\mbox{]}++
+\item X=C0+\+YF--ZF\mbox{[}C1---WF--XF\mbox{]}+
+\item Y=-\/WF++\+XF\mbox{[}+++YF++\+ZF\mbox{]}-\/
+\item Z=--YF++++\+WF\mbox{[}+ZF++++\+XF\mbox{]}--XF
+\item F=
+\end{DoxyItemize}
+
+Iterations\+: 4\hypertarget{index_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{Output Images}{Output Images}}\label{index_autotoc_md6}
+\hypertarget{index_autotoc_md7}{}\doxyparagraph{\texorpdfstring{Iteration 1}{Iteration 1}}\label{index_autotoc_md7}
+\hypertarget{index_autotoc_md8}{}\doxyparagraph{\texorpdfstring{Iteration 2}{Iteration 2}}\label{index_autotoc_md8}
+\hypertarget{index_autotoc_md9}{}\doxyparagraph{\texorpdfstring{Iteration 3}{Iteration 3}}\label{index_autotoc_md9}
+\hypertarget{index_autotoc_md10}{}\doxyparagraph{\texorpdfstring{Iteration 4}{Iteration 4}}\label{index_autotoc_md10}
+\hypertarget{index_autotoc_md11}{}\doxyparagraph{\texorpdfstring{Iteration 5}{Iteration 5}}\label{index_autotoc_md11}
+\hypertarget{index_autotoc_md12}{}\doxysection{\texorpdfstring{Algortihm Description}{Algortihm Description}}\label{index_autotoc_md12}
+\doxylink{class_lindenmayer}{Lindenmayer} systems or L-\/systems use parallel rewriting systems to model various organisms and fractals. It consists of an alphabet to make strings, an axiom and set of rules for production. L-\/\+Systems are recursive in nature, which leads to self-\/similarity. Our project consists of two main shapes -\/ line and circle. The line drawing is an implementation of Bressenham\textquotesingle{}s Line Algorithms, and the cicle utilizes the Midpoint Circle Algorithm. To draw the final output, we use the concept of L-\/\+Systems. The generated string is parsed and the set of production rules are applied. These rules are described above. The outputs produced with increasing iterations is shown above as well.\hypertarget{index_autotoc_md13}{}\doxysection{\texorpdfstring{Timing Analysis}{Timing Analysis}}\label{index_autotoc_md13}
+We can see clearly that with each iteration, the time for execution(in milliseconds) increases drastically.
+
+ \hypertarget{index_autotoc_md14}{}\doxysection{\texorpdfstring{Issues in Coding}{Issues in Coding}}\label{index_autotoc_md14}
+Understading the color allocation for the different braches of the tree and understanding the placement for the fruits was a challenge. Drawing the sun and adding a gradient to the sunrays was a learning curve. \hypertarget{index_autotoc_md15}{}\doxysection{\texorpdfstring{References}{References}}\label{index_autotoc_md15}
+\mbox{[}1\mbox{]} \href{https://paulbourke.net/fractals/lsys/}{\texttt{ https\+://paulbourke.\+net/fractals/lsys/}}
+
+\mbox{[}2\mbox{]} \href{https://www.youtube.com/watch?v=f6ra024-ASY&t=1134s}{\texttt{ https\+://www.\+youtube.\+com/watch?v=f6ra024-\/\+ASY\&t=1134s}}
+
+\mbox{[}3\mbox{]} \href{http://alvyray.com/Papers/CG/PlantsFractalsandFormalLanguages.pdf}{\texttt{ http\+://alvyray.\+com/\+Papers/\+CG/\+Plants\+Fractalsand\+Formal\+Languages.\+pdf}}
+
+\mbox{[}4\mbox{]} \href{https://docs.racket-lang.org/lindenmayer/Interpreting_L-systems.html?source=post_page--&mdash;98e07de6bd63-------------------&mdash;}{\texttt{ https\+://docs.\+racket-\/lang.\+org/lindenmayer/\+Interpreting\+\_\+\+L-\/systems.\+html?source=post\+\_\+page-\/-\/---98e07de6bd63-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---}} 

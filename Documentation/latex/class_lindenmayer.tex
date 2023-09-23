@@ -1,0 +1,287 @@
+\doxysection{Lindenmayer Class Reference}
+\hypertarget{class_lindenmayer}{}\label{class_lindenmayer}\index{Lindenmayer@{Lindenmayer}}
+
+
+A class to draw \doxylink{class_lindenmayer}{Lindenmayer} Systems.  
+
+
+
+
+{\ttfamily \#include $<$Lindenmayer.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_lindenmayer_1_1turtle_state}{turtle\+State}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lindenmayer_aea6486b3bdf038ae135ad0b403bd85e6}{Lindenmayer}} (string axiom, int iterations)
+\item 
+void \mbox{\hyperlink{class_lindenmayer_ae295a1e8298c72c14c8791240689bc47}{setX}} (int x)
+\item 
+void \mbox{\hyperlink{class_lindenmayer_a2441832077468f72db552a9ce08b650b}{setY}} (int y)
+\item 
+void \mbox{\hyperlink{class_lindenmayer_a5d4277a789e3cfa65cebb755c01a5349}{set\+Angle}} (double angle)
+\item 
+void \mbox{\hyperlink{class_lindenmayer_a502ab411b0e49c57ebc0c8fcf85c6eaa}{set\+Branch\+Length}} (double branch\+Length)
+\item 
+void \mbox{\hyperlink{class_lindenmayer_ae6fc02a581da7584bf75d915bd382796}{set\+Branch\+Scale\+Factor}} (double branch\+Scale\+Factor)
+\item 
+void \mbox{\hyperlink{class_lindenmayer_a7d1e549417b5dc7559c21173e297bf6c}{set\+Point\+Scale\+Factor}} (double point\+Scale\+Factor)
+\item 
+void \mbox{\hyperlink{class_lindenmayer_a01c08c22d00fe5a9000881bc8b5ceabd}{set\+Point\+Size}} (double point\+Size)
+\item 
+void \mbox{\hyperlink{class_lindenmayer_a6200f6bb4fc5be7f3da1d22189b6e5b1}{add\+Rule}} (string rule)
+\item 
+int \mbox{\hyperlink{class_lindenmayer_a9f57470336cd62369bf49f201372dc6b}{getX}} ()
+\item 
+int \mbox{\hyperlink{class_lindenmayer_a2620d8ed721da40727fd02842228b882}{getY}} ()
+\item 
+double \mbox{\hyperlink{class_lindenmayer_a57f65fbc1fdcbdb91d53e9d467573c1a}{get\+Angle}} ()
+\item 
+string \mbox{\hyperlink{class_lindenmayer_a7ab080cb44c2b655cb135608e441046d}{get\+Axiom}} ()
+\item 
+double \mbox{\hyperlink{class_lindenmayer_ab22aa232e43e55e2637c3595004b383e}{get\+Branch\+Length}} ()
+\item 
+double \mbox{\hyperlink{class_lindenmayer_a9937550408dad47660fc98d5f9e1441e}{get\+Branch\+Scale\+Factor}} ()
+\item 
+double \mbox{\hyperlink{class_lindenmayer_ae5c381fd3095eb9a28d2b41d286b024a}{get\+Point\+Size}} ()
+\item 
+double \mbox{\hyperlink{class_lindenmayer_ae853340126428a9c57f7b68a39537762}{get\+Point\+Scale\+Factor}} ()
+\item 
+void \mbox{\hyperlink{class_lindenmayer_a8ee22fe8c931aa86e85c472692d9c0af}{draw}} (double colors\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}=NULL)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_lindenmayer_a4def016b4b209c7ca7709df3294668b7}\label{class_lindenmayer_a4def016b4b209c7ca7709df3294668b7} 
+int {\bfseries currentX}
+\item 
+\Hypertarget{class_lindenmayer_a5bf65949a5585930c72c0f74c21206bd}\label{class_lindenmayer_a5bf65949a5585930c72c0f74c21206bd} 
+int {\bfseries currentY}
+\item 
+\Hypertarget{class_lindenmayer_afa08b45dbeaeabb8489243eb194aa726}\label{class_lindenmayer_afa08b45dbeaeabb8489243eb194aa726} 
+int {\bfseries iterations}
+\item 
+\Hypertarget{class_lindenmayer_ad5eca33c464ec3c8e6296e6a7a51cc16}\label{class_lindenmayer_ad5eca33c464ec3c8e6296e6a7a51cc16} 
+double {\bfseries branch\+Length}
+\item 
+\Hypertarget{class_lindenmayer_a28d091f21bb2e3926c9cab51c0c1ae5f}\label{class_lindenmayer_a28d091f21bb2e3926c9cab51c0c1ae5f} 
+double {\bfseries point\+Size}
+\item 
+\Hypertarget{class_lindenmayer_aadf548c9839672e1994f8db3f260fe61}\label{class_lindenmayer_aadf548c9839672e1994f8db3f260fe61} 
+double {\bfseries rotation\+Angle}
+\item 
+\Hypertarget{class_lindenmayer_a2d380fd4a2043b2a5980d25747a8e2a4}\label{class_lindenmayer_a2d380fd4a2043b2a5980d25747a8e2a4} 
+double {\bfseries branch\+Scale\+Factor}
+\item 
+\Hypertarget{class_lindenmayer_a609f9c53e57bde7aaa8bfad14af823a6}\label{class_lindenmayer_a609f9c53e57bde7aaa8bfad14af823a6} 
+double {\bfseries point\+Scale\+Factor}
+\item 
+\Hypertarget{class_lindenmayer_ab24bd2e7a4f8f725b8fec57686bcc745}\label{class_lindenmayer_ab24bd2e7a4f8f725b8fec57686bcc745} 
+string {\bfseries axiom}
+\item 
+\Hypertarget{class_lindenmayer_ae89d180e2cddb41c385f3edaecfda59b}\label{class_lindenmayer_ae89d180e2cddb41c385f3edaecfda59b} 
+string {\bfseries generation}
+\item 
+\Hypertarget{class_lindenmayer_a7c1e633779216e8870b3b269d1f6b6a2}\label{class_lindenmayer_a7c1e633779216e8870b3b269d1f6b6a2} 
+map$<$ string, string $>$ {\bfseries rules}
+\item 
+\Hypertarget{class_lindenmayer_ac5d57137ae21d6f0f7ada4aaf7b4bc5d}\label{class_lindenmayer_ac5d57137ae21d6f0f7ada4aaf7b4bc5d} 
+stack$<$ \mbox{\hyperlink{struct_lindenmayer_1_1turtle_state}{turtle\+State}} $>$ {\bfseries state\+Stack}
+\item 
+\Hypertarget{class_lindenmayer_a588c5cc6bc691ffefbdcd7080ab987b9}\label{class_lindenmayer_a588c5cc6bc691ffefbdcd7080ab987b9} 
+\mbox{\hyperlink{class_shape_drawer}{Shape\+Drawer}} {\bfseries sd}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to draw \doxylink{class_lindenmayer}{Lindenmayer} Systems. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_lindenmayer_aea6486b3bdf038ae135ad0b403bd85e6}\label{class_lindenmayer_aea6486b3bdf038ae135ad0b403bd85e6} 
+\index{Lindenmayer@{Lindenmayer}!Lindenmayer@{Lindenmayer}}
+\index{Lindenmayer@{Lindenmayer}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{Lindenmayer()}{Lindenmayer()}}
+{\footnotesize\ttfamily Lindenmayer\+::\+Lindenmayer (\begin{DoxyParamCaption}\item[{string}]{axiom,  }\item[{int}]{iterations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor method to initialise values of \doxylink{class_lindenmayer}{Lindenmayer} object.
+
+The constructor takes in axiom and number of iterations as a parameter and sets some default values for other fields
+\begin{DoxyParams}{Parameters}
+{\em axiom} & The axiom for L-\/\+System  \\
+\hline
+{\em iterations} & Number of times the given rules have to be applied to the axiom \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_lindenmayer_a6200f6bb4fc5be7f3da1d22189b6e5b1}\label{class_lindenmayer_a6200f6bb4fc5be7f3da1d22189b6e5b1} 
+\index{Lindenmayer@{Lindenmayer}!addRule@{addRule}}
+\index{addRule@{addRule}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{addRule()}{addRule()}}
+{\footnotesize\ttfamily void Lindenmayer\+::add\+Rule (\begin{DoxyParamCaption}\item[{string}]{rule }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to add rules to the L-\/\+System.
+\begin{DoxyParams}{Parameters}
+{\em rule} & The rule which has to be applied to the axiom. Rule should be of the form "{}\+X=\+ABCDEF"{} if X has to be replace with ABCDEF in subsequent iterations \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_lindenmayer_a8ee22fe8c931aa86e85c472692d9c0af}\label{class_lindenmayer_a8ee22fe8c931aa86e85c472692d9c0af} 
+\index{Lindenmayer@{Lindenmayer}!draw@{draw}}
+\index{draw@{draw}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Lindenmayer\+::draw (\begin{DoxyParamCaption}\item[{double}]{colors\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]} = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to draw the L-\/\+System given the axiom and set of rules.
+\begin{DoxyParams}{Parameters}
+{\em colors} & A 2-\/D array of colors which has to be passed to the function. A sample array of 2 colors is \{\{r1, g1, b1\}, \{r2, g2, b2\}\} where r, g, b are the red, green, blue values for a color respectively \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_lindenmayer_a57f65fbc1fdcbdb91d53e9d467573c1a}\label{class_lindenmayer_a57f65fbc1fdcbdb91d53e9d467573c1a} 
+\index{Lindenmayer@{Lindenmayer}!getAngle@{getAngle}}
+\index{getAngle@{getAngle}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{getAngle()}{getAngle()}}
+{\footnotesize\ttfamily double Lindenmayer\+::get\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to get the current rotation angle of turtle on screen.\Hypertarget{class_lindenmayer_a7ab080cb44c2b655cb135608e441046d}\label{class_lindenmayer_a7ab080cb44c2b655cb135608e441046d} 
+\index{Lindenmayer@{Lindenmayer}!getAxiom@{getAxiom}}
+\index{getAxiom@{getAxiom}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{getAxiom()}{getAxiom()}}
+{\footnotesize\ttfamily string Lindenmayer\+::get\+Axiom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to get the axiom of current L-\/\+System.\Hypertarget{class_lindenmayer_ab22aa232e43e55e2637c3595004b383e}\label{class_lindenmayer_ab22aa232e43e55e2637c3595004b383e} 
+\index{Lindenmayer@{Lindenmayer}!getBranchLength@{getBranchLength}}
+\index{getBranchLength@{getBranchLength}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{getBranchLength()}{getBranchLength()}}
+{\footnotesize\ttfamily double Lindenmayer\+::get\+Branch\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to get the current branch length of L-\/\+System.\Hypertarget{class_lindenmayer_a9937550408dad47660fc98d5f9e1441e}\label{class_lindenmayer_a9937550408dad47660fc98d5f9e1441e} 
+\index{Lindenmayer@{Lindenmayer}!getBranchScaleFactor@{getBranchScaleFactor}}
+\index{getBranchScaleFactor@{getBranchScaleFactor}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{getBranchScaleFactor()}{getBranchScaleFactor()}}
+{\footnotesize\ttfamily double Lindenmayer\+::get\+Branch\+Scale\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to get the current value of branch\+Scale\+Factor.\Hypertarget{class_lindenmayer_ae853340126428a9c57f7b68a39537762}\label{class_lindenmayer_ae853340126428a9c57f7b68a39537762} 
+\index{Lindenmayer@{Lindenmayer}!getPointScaleFactor@{getPointScaleFactor}}
+\index{getPointScaleFactor@{getPointScaleFactor}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{getPointScaleFactor()}{getPointScaleFactor()}}
+{\footnotesize\ttfamily double Lindenmayer\+::get\+Point\+Scale\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to get the current value of point\+Scale\+Factor.\Hypertarget{class_lindenmayer_ae5c381fd3095eb9a28d2b41d286b024a}\label{class_lindenmayer_ae5c381fd3095eb9a28d2b41d286b024a} 
+\index{Lindenmayer@{Lindenmayer}!getPointSize@{getPointSize}}
+\index{getPointSize@{getPointSize}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{getPointSize()}{getPointSize()}}
+{\footnotesize\ttfamily double Lindenmayer\+::get\+Point\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to get the current value of point size.\Hypertarget{class_lindenmayer_a9f57470336cd62369bf49f201372dc6b}\label{class_lindenmayer_a9f57470336cd62369bf49f201372dc6b} 
+\index{Lindenmayer@{Lindenmayer}!getX@{getX}}
+\index{getX@{getX}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily int Lindenmayer\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to get the current X-\/\+Coordinate of turtle on screen.\Hypertarget{class_lindenmayer_a2620d8ed721da40727fd02842228b882}\label{class_lindenmayer_a2620d8ed721da40727fd02842228b882} 
+\index{Lindenmayer@{Lindenmayer}!getY@{getY}}
+\index{getY@{getY}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily int Lindenmayer\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A method to get the current Y-\/\+Coordinate of turtle on screen.\Hypertarget{class_lindenmayer_a5d4277a789e3cfa65cebb755c01a5349}\label{class_lindenmayer_a5d4277a789e3cfa65cebb755c01a5349} 
+\index{Lindenmayer@{Lindenmayer}!setAngle@{setAngle}}
+\index{setAngle@{setAngle}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{setAngle()}{setAngle()}}
+{\footnotesize\ttfamily void Lindenmayer\+::set\+Angle (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Setter method for setting the rotation angle of the turtle corresponding to + and -\/ in the generation string.
+
+Initial rotation angle = 20 degrees
+\begin{DoxyParams}{Parameters}
+{\em angle} & The rotation angle for L-\/\+System in degrees \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_lindenmayer_a502ab411b0e49c57ebc0c8fcf85c6eaa}\label{class_lindenmayer_a502ab411b0e49c57ebc0c8fcf85c6eaa} 
+\index{Lindenmayer@{Lindenmayer}!setBranchLength@{setBranchLength}}
+\index{setBranchLength@{setBranchLength}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{setBranchLength()}{setBranchLength()}}
+{\footnotesize\ttfamily void Lindenmayer\+::set\+Branch\+Length (\begin{DoxyParamCaption}\item[{double}]{branch\+Length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Setter method for setting the number of pixels the turtle moves in one step.
+
+Initial branch length = 100px
+\begin{DoxyParams}{Parameters}
+{\em branch\+Length} & The branch length for L-\/\+System \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_lindenmayer_ae6fc02a581da7584bf75d915bd382796}\label{class_lindenmayer_ae6fc02a581da7584bf75d915bd382796} 
+\index{Lindenmayer@{Lindenmayer}!setBranchScaleFactor@{setBranchScaleFactor}}
+\index{setBranchScaleFactor@{setBranchScaleFactor}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{setBranchScaleFactor()}{setBranchScaleFactor()}}
+{\footnotesize\ttfamily void Lindenmayer\+::set\+Branch\+Scale\+Factor (\begin{DoxyParamCaption}\item[{double}]{branch\+Scale\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Setter method for setting the factor with which the branch length is multiplied whenever branching off at a point.
+
+Initial branch scale factor = 0.\+75
+\begin{DoxyParams}{Parameters}
+{\em branch\+Scale\+Factor} & The branch scale factor for L-\/\+System \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_lindenmayer_a7d1e549417b5dc7559c21173e297bf6c}\label{class_lindenmayer_a7d1e549417b5dc7559c21173e297bf6c} 
+\index{Lindenmayer@{Lindenmayer}!setPointScaleFactor@{setPointScaleFactor}}
+\index{setPointScaleFactor@{setPointScaleFactor}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{setPointScaleFactor()}{setPointScaleFactor()}}
+{\footnotesize\ttfamily void Lindenmayer\+::set\+Point\+Scale\+Factor (\begin{DoxyParamCaption}\item[{double}]{point\+Scale\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Setter method for setting the factor with which the point size is multiplied whenever branching off at a point.
+
+Initial point scale factor = 1.\+0
+\begin{DoxyParams}{Parameters}
+{\em point\+Scale\+Factor} & The point scale factor for L-\/\+System \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_lindenmayer_a01c08c22d00fe5a9000881bc8b5ceabd}\label{class_lindenmayer_a01c08c22d00fe5a9000881bc8b5ceabd} 
+\index{Lindenmayer@{Lindenmayer}!setPointSize@{setPointSize}}
+\index{setPointSize@{setPointSize}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{setPointSize()}{setPointSize()}}
+{\footnotesize\ttfamily void Lindenmayer\+::set\+Point\+Size (\begin{DoxyParamCaption}\item[{double}]{point\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Setter method for setting the initial point size.
+
+Initial point size = 1.\+0
+\begin{DoxyParams}{Parameters}
+{\em point\+Size} & The point size for L-\/\+System \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_lindenmayer_ae295a1e8298c72c14c8791240689bc47}\label{class_lindenmayer_ae295a1e8298c72c14c8791240689bc47} 
+\index{Lindenmayer@{Lindenmayer}!setX@{setX}}
+\index{setX@{setX}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{setX()}{setX()}}
+{\footnotesize\ttfamily void Lindenmayer\+::setX (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Setter method for setting the current X-\/\+Coordinate of drawing turtle on screen.
+
+Initial X-\/\+Coordinate = 0
+\begin{DoxyParams}{Parameters}
+{\em x} & The new X-\/\+Coordinate \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_lindenmayer_a2441832077468f72db552a9ce08b650b}\label{class_lindenmayer_a2441832077468f72db552a9ce08b650b} 
+\index{Lindenmayer@{Lindenmayer}!setY@{setY}}
+\index{setY@{setY}!Lindenmayer@{Lindenmayer}}
+\doxysubsubsection{\texorpdfstring{setY()}{setY()}}
+{\footnotesize\ttfamily void Lindenmayer\+::setY (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Setter method for setting the current Y-\/\+Coordinate of drawing turtle on screen.
+
+Initial Y-\/\+Coordinate = 0
+\begin{DoxyParams}{Parameters}
+{\em y} & The new T-\/\+Coordinate \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/adapa/\+Open\+GL/\+Project2/Lindenmayer.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,271 @@
+\doxysection{Lindenmayer.\+h}
+\hypertarget{_lindenmayer_8h_source}{}\label{_lindenmayer_8h_source}\index{C:/Users/adapa/OpenGL/Project2/Lindenmayer.h@{C:/Users/adapa/OpenGL/Project2/Lindenmayer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ Lindenmayer\_h}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ Lindenmayer\_h}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stack>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}ShapeDrawer.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lindenmayer}{Lindenmayer}}\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_lindenmayer_1_1turtle_state}{turtleState}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ A\ structure\ to\ store\ the\ turtle's\ state\ variables.}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ branchLength,\ angle,\ red,\ green,\ blue,\ pointSize;}
+\DoxyCodeLine{00021\ \ \ \ \ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ The\ use\ of\ these\ has\ been\ explained\ in\ the\ corresponding\ setter\ methods.}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ currentX,\ currentY,\ iterations;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{double}\ branchLength,\ pointSize,\ rotationAngle,\ branchScaleFactor,\ pointScaleFactor;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{string}\ axiom,\ generation;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ A\ map\ to\ store\ the\ rules\ of\ L-\/System.\ The\ map\ stores\ the\ value\ which\ has\ to\ be\ replaced\ and\ also\ the\ new\ value.}}
+\DoxyCodeLine{00029\ \ \ \ \ map<string,\ string>\ rules;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ A\ stack\ to\ store\ the\ states\ of\ turtle.}}
+\DoxyCodeLine{00032\ \ \ \ \ stack<turtleState>\ stateStack;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ A\ ShapeDrawer\ object\ to\ draw\ the\ L-\/Sytems\ after\ calculations\ have\ been\ done.}}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_shape_drawer}{ShapeDrawer}}\ sd;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_lindenmayer_aea6486b3bdf038ae135ad0b403bd85e6}{Lindenmayer}}(\textcolor{keywordtype}{string}\ axiom,\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ iterations\ }
+\DoxyCodeLine{00042\ \ \ \ \ )\ \{}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ currentX\ =\ 0;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ currentY\ =\ 0;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ this-\/>iterations\ =\ iterations;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ branchLength\ =\ 100;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ pointSize\ =\ 1.0;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ rotationAngle\ =\ 20.0;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ branchScaleFactor\ =\ 0.75;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ pointScaleFactor\ =\ 1.0;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ this-\/>axiom\ =\ axiom;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ generation\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lindenmayer_ae295a1e8298c72c14c8791240689bc47}{setX}}(\textcolor{keywordtype}{int}\ x\ )\ \{}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ currentX\ =\ x;}
+\DoxyCodeLine{00066\ \ \ \ \ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lindenmayer_a2441832077468f72db552a9ce08b650b}{setY}}(\textcolor{keywordtype}{int}\ y\ )\ \{}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ currentY\ =\ y;}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lindenmayer_a5d4277a789e3cfa65cebb755c01a5349}{setAngle}}(\textcolor{keywordtype}{double}\ angle\ )\ \{}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ rotationAngle\ =\ angle;}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lindenmayer_a502ab411b0e49c57ebc0c8fcf85c6eaa}{setBranchLength}}(\textcolor{keywordtype}{double}\ branchLength\ )\ \{}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ this-\/>branchLength\ =\ branchLength;}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lindenmayer_ae6fc02a581da7584bf75d915bd382796}{setBranchScaleFactor}}(\textcolor{keywordtype}{double}\ branchScaleFactor\ )\ \{}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ this-\/>branchScaleFactor\ =\ branchScaleFactor;}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lindenmayer_a7d1e549417b5dc7559c21173e297bf6c}{setPointScaleFactor}}(\textcolor{keywordtype}{double}\ pointScaleFactor\ )\ \{}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ this-\/>pointScaleFactor\ =\ pointScaleFactor;}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lindenmayer_a01c08c22d00fe5a9000881bc8b5ceabd}{setPointSize}}(\textcolor{keywordtype}{double}\ pointSize\ )\ \{}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ this-\/>pointSize\ =\ pointSize;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ sd.\mbox{\hyperlink{class_shape_drawer_a05e88ac4795336a98c19d2f6cd0941de}{setPointSize}}(pointSize);}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lindenmayer_a6200f6bb4fc5be7f3da1d22189b6e5b1}{addRule}}(\textcolor{keywordtype}{string}\ rule\ )\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ pos\ =\ rule.find(\textcolor{charliteral}{'='});}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ rules.insert(pair<string,\ string>(rule.substr(0,\ pos),\ rule.substr(pos\ +\ 1)));}
+\DoxyCodeLine{00119\ \ \ \ \ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//\ Getters}}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_lindenmayer_a9f57470336cd62369bf49f201372dc6b}{getX}}()\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ currentX;}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_lindenmayer_a2620d8ed721da40727fd02842228b882}{getY}}()\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ currentY;}
+\DoxyCodeLine{00130\ \ \ \ \ \}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_lindenmayer_a57f65fbc1fdcbdb91d53e9d467573c1a}{getAngle}}()\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rotationAngle;}
+\DoxyCodeLine{00135\ \ \ \ \ \}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_lindenmayer_a7ab080cb44c2b655cb135608e441046d}{getAxiom}}()\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ axiom;}
+\DoxyCodeLine{00140\ \ \ \ \ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_lindenmayer_ab22aa232e43e55e2637c3595004b383e}{getBranchLength}}()\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ branchLength;}
+\DoxyCodeLine{00145\ \ \ \ \ \}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_lindenmayer_a9937550408dad47660fc98d5f9e1441e}{getBranchScaleFactor}}()\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ branchScaleFactor;}
+\DoxyCodeLine{00150\ \ \ \ \ \}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_lindenmayer_ae5c381fd3095eb9a28d2b41d286b024a}{getPointSize}}()\ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pointSize;}
+\DoxyCodeLine{00155\ \ \ \ \ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_lindenmayer_ae853340126428a9c57f7b68a39537762}{getPointScaleFactor}}()\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pointScaleFactor;}
+\DoxyCodeLine{00160\ \ \ \ \ \}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lindenmayer_a8ee22fe8c931aa86e85c472692d9c0af}{draw}}(\textcolor{keywordtype}{double}\ colors[][3]\ =\ NULL\ )\ \{}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j;}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (generation.length()\ ==\ 0)\ \textcolor{comment}{//\ Do\ not\ generate\ the\ generation\ string\ if\ it\ has\ already\ been\ generated}}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ map<string,\ string>::iterator\ it;}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ generation\ =\ axiom;}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ tGeneration\ =\ \textcolor{stringliteral}{"{}"{}};\ \textcolor{comment}{//\ A\ temporary\ string\ to\ store\ the\ current\ generation\ of\ L-\/system\ until\ the\ final\ generation\ is\ derived}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Generating\ the\ final\ generation\ string.}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ iterations;\ i++)\ \{}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ length\ =\ generation.length();}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (j\ =\ 0;\ j\ <\ length;\ j++)\ \{}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Find\ if\ there\ is\ a\ rule\ corresponding\ to\ the\ current\ character\ being\ read,}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ it\ =\ rules.find(generation.substr(j,\ 1));}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ !=\ rules.end())\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Replace\ the\ character\ if\ there\ is\ a\ corresponding\ rule}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tGeneration\ =\ tGeneration\ +\ rules.at(generation.substr(j,\ 1));}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tGeneration\ =\ tGeneration\ +\ generation.substr(j,\ 1);}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ generation\ =\ tGeneration;}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tGeneration\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ length\ =\ generation.length();}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Setup\ the\ drawing\ variables.}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ currentAngle\ =\ 0.0;}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ currentBranchLength\ =\ branchLength;}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ currentPointSize\ =\ pointSize;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ red\ =\ 1,\ green\ =\ 0,\ blue\ =\ 0;}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ length;\ i++)\ \{}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Start\ reading\ the\ final\ generation\ string.}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ next\ =\ generation.at(i);}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (next\ ==\ \textcolor{charliteral}{'F'})\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Draw\ a\ line\ at\ the\ current\ angle\ using\ the\ ShapeDrawer\ object\ when\ 'F'\ is\ encountered.}}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sd.\mbox{\hyperlink{class_shape_drawer_aa9a5d127478916b0ab46d68aa8e54a7b}{drawLineAtAngle}}(currentX,\ currentY,\ 90\ -\/\ currentAngle,\ currentBranchLength);}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Update\ the\ turtle's\ position\ to\ the\ end\ of\ newly\ drawn\ line.}}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentX\ +=\ round(currentBranchLength\ *\ sin(toRadians(currentAngle)));}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentY\ +=\ round(currentBranchLength\ *\ cos(toRadians(currentAngle)));}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (next\ ==\ \textcolor{charliteral}{'/'})\ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Draw\ a\ circle\ at\ current\ position\ using\ ShapeDrawer\ object\ when\ '//'\ is\ encountered}}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sd.\mbox{\hyperlink{class_shape_drawer_a4e7b62f2ccd0253748a7e390ea474434}{drawCircle}}(currentX,\ currentY,\ 2);}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (next\ ==\ \textcolor{charliteral}{'-\/'})\ \textcolor{comment}{//\ Right\ rotation}}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentAngle\ +=\ rotationAngle;}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (next\ ==\ \textcolor{charliteral}{'+'})\ \textcolor{comment}{//\ Left\ rotation}}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentAngle\ -\/=\ rotationAngle;}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (next\ ==\ \textcolor{charliteral}{'C'})\ \{}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Color\ changing}}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ colorNum\ =\ generation.at(i\ +\ 1)\ -\/\ 48;}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ red\ =\ colors[colorNum][0];}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ green\ =\ colors[colorNum][1];}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blue\ =\ colors[colorNum][2];}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sd.\mbox{\hyperlink{class_shape_drawer_ac65f5d5a9cca8167dea01d3f2c49f854}{setColour}}(red,\ green,\ blue);}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i\ =\ i\ +\ 1;}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (next\ ==\ \textcolor{charliteral}{'['})\ \{}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Save\ the\ state\ of\ turtle\ when\ '['\ is\ encountered.}}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_lindenmayer_1_1turtle_state}{turtleState}}\ currentState;}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentState.x\ =\ currentX;}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentState.y\ =\ currentY;}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentState.branchLength\ =\ currentBranchLength;}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentState.pointSize\ =\ currentPointSize;}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentState.angle\ =\ currentAngle;}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentState.red\ =\ red;}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentState.green\ =\ green;}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentState.blue\ =\ blue;}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateStack.push(currentState);}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Scale\ the\ point\ size\ and\ branch\ size\ according\ to\ the\ corresponding\ scale\ factors.}}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentBranchLength\ *=\ branchScaleFactor;}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentPointSize\ *=\ pointScaleFactor;}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sd.\mbox{\hyperlink{class_shape_drawer_a05e88ac4795336a98c19d2f6cd0941de}{setPointSize}}(currentPointSize);}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (next\ ==\ \textcolor{charliteral}{']'})\ \{}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reapply\ the\ last\ saved\ state\ of\ the\ turtle\ when\ ']'\ is\ encountered.}}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_lindenmayer_1_1turtle_state}{turtleState}}\ newState\ =\ stateStack.top();}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentX\ =\ newState.x;}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentY\ =\ newState.y;}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentAngle\ =\ newState.angle;}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentBranchLength\ =\ newState.branchLength;}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentPointSize\ =\ newState.pointSize;}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ red\ =\ newState.red;}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ green\ =\ newState.green;}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blue\ =\ newState.blue;}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ the\ new\ color\ and\ point\ size.}}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sd.\mbox{\hyperlink{class_shape_drawer_ac65f5d5a9cca8167dea01d3f2c49f854}{setColour}}(red,\ green,\ blue);}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sd.\mbox{\hyperlink{class_shape_drawer_a05e88ac4795336a98c19d2f6cd0941de}{setPointSize}}(pointSize);}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateStack.pop();}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \ \ \ \ \}}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ \};}
+\DoxyCodeLine{00296\ }
+\DoxyCodeLine{00297\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ Lindenmayer\_h\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
